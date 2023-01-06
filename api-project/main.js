@@ -1,6 +1,6 @@
 import "./style.css";
-
-const URL = "https://www.breakingbadapi.com/api/characters";
+let pokemon = "ditto";
+const URL = "https://pokeapi.co/api/v2/pokemon/${pokemon}";
 
 async function getData(URL) {
   try {
@@ -9,11 +9,17 @@ async function getData(URL) {
       throw new error(response);
     } else {
       const data = await response.json();
-      document.getElementById("app").textContent = data.name;
-      console.log(`good`);
+      document.getElementById("app").insertAdjacentHTML(
+        "afterbegin",
+        `  <div class="card">
+      <h2>${data.name}</h2>
+      <img src="${data.sprites.front_default}" alt="Pokemon">
+    </div>`
+      );
     }
   } catch (error) {
     console.log(error);
+    console.log(response.status);
   }
 }
 getData(URL);
