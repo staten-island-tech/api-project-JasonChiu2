@@ -1,6 +1,9 @@
 import "./style.css";
-let pokemon = "ditto";
-const URL = "https://pokeapi.co/api/v2/pokemon/${pokemon}";
+import { DOM } from "../js/DOMSelectors.js";
+
+let pokemon = DOM.name.value;
+
+const URL = `https://pokeapi.co/api/v2/pokemon/${pokemon}`;
 
 async function getData(URL) {
   try {
@@ -22,4 +25,13 @@ async function getData(URL) {
     console.log(response.status);
   }
 }
-getData(URL);
+
+function clear() {
+  DOM.name.value = "";
+}
+
+DOM.form.addEventListener("submit", function () {
+  event.preventDefault();
+  getData(URL);
+  clear();
+});
