@@ -1,4 +1,4 @@
-import "./style.css";
+import "/style.css";
 import { DOM } from "../js/DOMSelectors.js";
 
 let pokemon = DOM.name.value;
@@ -12,7 +12,7 @@ async function getData(URL) {
       throw new error(response);
     } else {
       const data = await response.json();
-      document.getElementById("app").insertAdjacentHTML(
+      DOM.container.insertAdjacentHTML(
         "afterbegin",
         `  <div class="card">
       <h2>${data.name}</h2>
@@ -22,7 +22,6 @@ async function getData(URL) {
     }
   } catch (error) {
     console.log(error);
-    console.log(response.status);
   }
 }
 
