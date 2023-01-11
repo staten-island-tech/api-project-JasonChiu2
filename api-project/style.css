@@ -6,3 +6,15 @@ body,
   box-sizing: border-box;
   font-size: 62.5%;
 }
+
+#form {
+  font-size: 4rem;
+}
+
+.name {
+  font-size: 3rem;
+}
+
+.abilities {
+  font-size: 3rem;
+}
