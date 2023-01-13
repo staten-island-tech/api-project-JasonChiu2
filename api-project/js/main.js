@@ -21,10 +21,10 @@ async function getData(URL) {
       <ul class="abilities"></ul>
     </div>`
       );
-      document.querySelector(".abilities").insertAdjacentHTML(
-        "afterbegin",
-        data.abilities.forEach((ability) => ability.ability.name)
-      );
+      data.abilities.forEach((ability) => ability.ability.name);
+      document
+        .querySelector(".abilities")
+        .insertAdjacentHTML("afterbegin", `<li></li>`);
     }
   } catch (error) {
     console.log(error);
