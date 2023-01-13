@@ -21,13 +21,17 @@ async function getData(URL) {
       <ul class="abilities"></ul>
     </div>`
       );
-      quereySelector(".abilities").insertAdjacentHTML("afterbegin", data.abilities.forEach((element) => element.ability.name)
+      document.querySelector(".abilities").insertAdjacentHTML(
+        "afterbegin",
+        data.abilities.forEach((ability) => ability.ability.name)
+      );
+    }
   } catch (error) {
     console.log(error);
     DOM.container.insertAdjacentHTML(
       "afterbegin",
       `<h1 class="name">(·_·) ermm what the heck</h1>`
-    });
+    );
   }
 }
 
