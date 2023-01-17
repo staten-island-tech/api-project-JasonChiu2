@@ -17,7 +17,9 @@ async function getData(URL) {
       <h2 class="name">${
         data.name.charAt(0).toUpperCase() + data.name.slice(1)
       }</h2>
-      <img src="${data.sprites.front_default}" alt="Pokemon" class="image">
+      <img src="${data.sprites.front_default}" alt="Front of ${
+          data.name
+        }" class="image">
       <ul class="abilities"></ul>
     </div>`
       );
@@ -30,7 +32,7 @@ async function getData(URL) {
     console.log(error);
     DOM.container.insertAdjacentHTML(
       "afterbegin",
-      `<h1 class="name">(·_·) ermm what the heck</h1>`
+      `<h1 class="error">(·_·) ermm what the heck</h1>`
     );
   }
 }
