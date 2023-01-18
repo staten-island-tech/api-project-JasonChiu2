@@ -23,10 +23,16 @@ async function getData(URL) {
       <ul class="abilities"></ul>
     </div>`
       );
-      data.abilities.forEach((ability) => ability.ability.name);
-      document
-        .querySelector(".abilities")
-        .insertAdjacentHTML("afterbegin", `<li></li>`);
+      data.abilities.forEach((a) => {
+        document
+          .querySelector(".abilities")
+          .insertAdjacentHTML(
+            "afterbegin",
+            `<li>${
+              a.ability.name.charAt(0).toUpperCase() + a.ability.name.slice(1)
+            }</li>`
+          );
+      });
     }
   } catch (error) {
     console.log(error);
