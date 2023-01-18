@@ -20,10 +20,13 @@ async function getData(URL) {
       <img src="${data.sprites.front_default}" alt="Front of ${
           data.name
         }" class="image">
+      <h3 class="label">Abilities</h3>
       <ul class="abilities"></ul>
+      <h3 class="label">Type(s)</h3>
+      <ul class="types"></ul>
     </div>`
       );
-      data.abilities.forEach((a) => {
+      data.abilities.forEach((a) =>
         document
           .querySelector(".abilities")
           .insertAdjacentHTML(
@@ -31,8 +34,18 @@ async function getData(URL) {
             `<li>${
               a.ability.name.charAt(0).toUpperCase() + a.ability.name.slice(1)
             }</li>`
-          );
-      });
+          )
+      );
+      data.types.forEach((t) =>
+        document
+          .querySelector(".types")
+          .insertAdjacentHTML(
+            "afterbegin",
+            `<li>${
+              t.type.name.charAt(0).toUpperCase() + t.type.name.slice(1)
+            }</li>`
+          )
+      );
     }
   } catch (error) {
     console.log(error);
