@@ -5,6 +5,7 @@ body,
   margin: 0;
   box-sizing: border-box;
   font-size: 62.5%;
+  font-family: "Press Start 2P", cursive;
 }
 
 #form {
@@ -13,23 +14,24 @@ body,
   padding: 1rem;
   border: solid 0.2rem;
   border-radius: 1rem;
+  background-color: #2a75bb;
 }
 
 .name-input {
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin-left: 0.3rem;
   margin-right: 0.3rem;
   border-radius: 0.8rem;
 }
 
 #submit {
-  font-size: 2.5rem;
+  font-size: 2rem;
   border-radius: 0.6rem;
   padding: 0.2rem;
 }
 
 .name {
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 
 .image {
@@ -39,24 +41,31 @@ body,
 }
 
 .label {
-  font-size: 3.5rem;
+  font-size: 2.5rem;
+  margin: 1rem;
 }
 
 .abilities {
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 
 .types {
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 
 .card {
   display: flex;
   align-items: center;
   flex-direction: column;
+  padding: 2.5rem 1rem;
+  background-color: #3c5aa6;
+  width: 50%;
+  margin: auto;
+  border-radius: 1rem;
+  border: solid 0.3rem;
 }
 
 .error {
-  font-size: 3rem;
+  font-size: 2.5rem;
   text-align: center;
 }
