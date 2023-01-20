@@ -6,6 +6,13 @@ body,
   box-sizing: border-box;
   font-size: 62.5%;
   font-family: "Press Start 2P", cursive;
+  background-color: #353535;
+}
+
+.header {
+  font-size: 4rem;
+  text-align: center;
+  margin: 1.5rem;
 }
 
 #form {
@@ -14,7 +21,15 @@ body,
   padding: 1rem;
   border: solid 0.2rem;
   border-radius: 1rem;
-  background-color: #2a75bb;
+  background-color: #2b78bf;
+}
+
+.label {
+  font-size: 2rem;
+  margin-left: 0.3rem;
+  margin-right: 0.3rem;
+  border-radius: 0.8rem;
+  background-color: #2b78bf;
 }
 
 .name-input {
@@ -22,35 +37,46 @@ body,
   margin-left: 0.3rem;
   margin-right: 0.3rem;
   border-radius: 0.8rem;
+  background-color: #ffcb05;
 }
 
 #submit {
   font-size: 2rem;
   border-radius: 0.6rem;
-  padding: 0.2rem;
+  padding: 0.3rem 0.4rem 0.2rem;
+  background-color: #c7a008;
 }
 
 .name {
   font-size: 2.5rem;
+  background-color: #5a78c4;
 }
 
 .image {
   float: left;
   height: 30%;
   width: 30%;
+  background-color: #5a78c4;
 }
 
-.label {
+.list {
   font-size: 2.5rem;
   margin: 1rem;
+  background-color: #5a78c4;
 }
 
 .abilities {
   font-size: 2.5rem;
+  background-color: #5a78c4;
 }
 
 .types {
   font-size: 2.5rem;
+  background-color: #5a78c4;
+}
+
+.list-item {
+  background-color: #5a78c4;
 }
 
 .card {
@@ -58,7 +84,7 @@ body,
   align-items: center;
   flex-direction: column;
   padding: 2.5rem 1rem;
-  background-color: #3c5aa6;
+  background-color: #5a78c4;
   width: 50%;
   margin: auto;
   border-radius: 1rem;

@@ -20,9 +20,9 @@ async function getData(URL) {
       <img src="${data.sprites.front_default}" alt="Front of ${
           data.name
         }" class="image">
-      <h3 class="label">Abilities</h3>
+      <h3 class="list">Abilities</h3>
       <ul class="abilities"></ul>
-      <h3 class="label">Type(s)</h3>
+      <h3 class="list">Type(s)</h3>
       <ul class="types"></ul>
     </div>`
       );
@@ -31,7 +31,7 @@ async function getData(URL) {
           .querySelector(".abilities")
           .insertAdjacentHTML(
             "afterbegin",
-            `<li>${
+            `<li class="list-item">${
               a.ability.name.charAt(0).toUpperCase() + a.ability.name.slice(1)
             }</li>`
           )
@@ -41,7 +41,7 @@ async function getData(URL) {
           .querySelector(".types")
           .insertAdjacentHTML(
             "afterbegin",
-            `<li>${
+            `<li class="list-item">${
               t.type.name.charAt(0).toUpperCase() + t.type.name.slice(1)
             }</li>`
           )
@@ -51,7 +51,7 @@ async function getData(URL) {
     console.log(error);
     DOM.container.insertAdjacentHTML(
       "afterbegin",
-      `<h1 class="error">(·_·) ermm what the heck</h1>`
+      `<h1 class="error">(._.) ermm what the heck</h1>`
     );
   }
 }
