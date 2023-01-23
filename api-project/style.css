@@ -10,11 +10,11 @@ body,
 }
 
 :root {
---light-blue: #5a78c4;
---cyan: #2b78bf;
---light-grey: #858585;
---light-yellow: #ffcb05;
---dark-yellow: #c7a008;
+  --light-blue: #5a78c4;
+  --cyan: #2b78bf;
+  --light-grey: #858585;
+  --light-yellow: #ffcb05;
+  --dark-yellow: #c7a008;
 }
 
 .header {
@@ -53,6 +53,12 @@ body,
   border-radius: 0.6rem;
   padding: 0.3rem 0.4rem 0.2rem;
   background-color: var(--dark-yellow);
+  transition: all 0.3s;
+}
+
+#submit:hover {
+  cursor: pointer;
+  background-color: var(--light-yellow);
 }
 
 .name {

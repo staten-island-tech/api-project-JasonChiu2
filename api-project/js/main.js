@@ -9,8 +9,6 @@ async function getData(URL) {
     } else {
       const data = await response.json();
 
-      console.log(data);
-
       DOM.container.insertAdjacentHTML(
         "afterbegin",
         `  <div class="card">
