@@ -6,13 +6,13 @@ body,
   box-sizing: border-box;
   font-size: 62.5%;
   font-family: "Press Start 2P", cursive;
-  background-color: var(--light-grey);
+  background-color: var(--red);
 }
 
 :root {
   --light-blue: #5a78c4;
   --cyan: #2b78bf;
-  --light-grey: #858585;
+  --red: #d21404;
   --light-yellow: #ffcb05;
   --dark-yellow: #c7a008;
 }
