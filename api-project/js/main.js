@@ -32,7 +32,7 @@ async function startUp(start) {
           .insertAdjacentHTML(
             "afterbegin",
             `<li class="list-item">${
-              a.ability.name.charAt(0).toUpperCase() + a.ability.name.slice(1)
+              a.ability.name.charAt(0).toUpperCase() + a.type.name.slice(1)
             }</li>`
           )
       );
